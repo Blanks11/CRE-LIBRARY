@@ -1,0 +1,4 @@
+CSC 301 - DATA STRUCTURES (sample file)
+
+Replace this file with your real lecture notes (PDF works best).
+Topics usually covered: arrays, linked lists, stacks, queues, trees, graphs, hashing, sorting and searching.

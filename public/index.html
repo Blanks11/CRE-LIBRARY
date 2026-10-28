@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREPO Course Library | Computer and Robotics Education, UNN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="auth">
+  <aside class="auth-side">
+    <div>
+      <div class="brand"><i></i> CREPO Library</div>
+      <h1>Every course, in one place.</h1>
+      <p class="lead">Read lecture notes online or download them for later. Built for students of the Department of Computer and Robotics Education, University of Nigeria, Nsukka.</p>
+      <div class="shelf" aria-hidden="true">
+        <span>CSC 301</span><span>VTE 302</span><span>EDU 211</span><span>CRE 201</span><span>CRE 305</span><span>STA 202</span>
+      </div>
+    </div>
+    <small>Create a free account with your department to get access.</small>
+  </aside>
+
+  <main class="auth-main">
+    <div class="panel">
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tab-login" aria-selected="true" aria-controls="login-form">Log in</button>
+        <button role="tab" id="tab-signup" aria-selected="false" aria-controls="signup-form">Create account</button>
+      </div>
+
+      <form id="login-form" novalidate>
+        <h2>Welcome back</h2>
+        <p class="sub">Log in to read and download your courses.</p>
+        <label for="l-email">Email</label>
+        <input id="l-email" type="email" autocomplete="email" required>
+        <label for="l-pass">Password</label>
+        <input id="l-pass" type="password" autocomplete="current-password" required>
+        <div class="error" id="login-error" role="alert"></div>
+        <button class="btn full" type="submit">Log in</button>
+      </form>
+
+      <form id="signup-form" class="hidden" novalidate>
+        <h2>Create your account</h2>
+        <p class="sub">It takes a minute. Tell us your department so we can match you to the right courses.</p>
+        <label for="s-name">Full name</label>
+        <input id="s-name" autocomplete="name" required>
+        <div class="row">
+          <div><label for="s-reg">Reg. number</label><input id="s-reg" placeholder="2023/000000"></div>
+          <div><label for="s-email">Email</label><input id="s-email" type="email" autocomplete="email" required></div>
+        </div>
+        <label for="s-dept">Department</label>
+        <select id="s-dept" required>
+          <option value="">Select your department</option>
+          <option>Computer and Robotics Education</option>
+          <option>Computer Science</option>
+          <option>Electronic and Computer Engineering</option>
+          <option>Science Education</option>
+          <option>Vocational Teacher Education</option>
+          <option>Mathematics</option>
+          <option>Statistics</option>
+          <option>Other</option>
+        </select>
+        <div id="other-wrap" class="hidden">
+          <label for="s-other">Your department</label>
+          <input id="s-other" placeholder="Type your department">
+        </div>
+        <label for="s-pass">Password</label>
+        <input id="s-pass" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters">
+        <div class="error" id="signup-error" role="alert"></div>
+        <button class="btn full" type="submit">Create account</button>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="/auth.js"></script>
+</body>
+</html>

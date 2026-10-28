@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sample-csc301",
+    "code": "CSC 301",
+    "title": "Data Structures",
+    "level": "300",
+    "description": "Arrays, linked lists, stacks, queues, trees and graphs. Sample entry: replace with your real notes.",
+    "file": "CSC301-Data-Structures-Sample.txt"
+  },
+  {
+    "id": "sample-vte302",
+    "code": "VTE 302",
+    "title": "Research Designs in VTE",
+    "level": "300",
+    "description": "Research designs in vocational and technical education. Sample entry: replace with your real notes.",
+    "file": "VTE302-Research-Designs-Sample.txt"
+  }
+]

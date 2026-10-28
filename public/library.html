@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Courses | CREPO Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <div class="brand"><i></i> CREPO Library</div>
+  <div class="who"><span id="who"></span><button class="btn ghost small" id="logout">Log out</button></div>
+</div></header>
+
+<main class="wrap">
+  <div class="head">
+    <div>
+      <h1>Course materials</h1>
+      <p id="dept-line">Read online or download for offline study.</p>
+    </div>
+  </div>
+
+  <details class="admin hidden" id="admin-box">
+    <summary>Add course material (admin)</summary>
+    <form id="upload-form">
+      <div class="row3">
+        <div><label for="u-code">Course code</label><input id="u-code" placeholder="CSC 301" required></div>
+        <div><label for="u-title">Title</label><input id="u-title" placeholder="Data Structures" required></div>
+        <div><label for="u-level">Level</label>
+          <select id="u-level"><option>100</option><option>200</option><option selected>300</option><option>400</option><option>500</option></select></div>
+      </div>
+      <label for="u-desc">Short description</label>
+      <input id="u-desc" placeholder="What this material covers">
+      <label for="u-file">File (PDF, DOCX, PPTX, up to 50 MB)</label>
+      <input id="u-file" type="file" required>
+      <div class="error" id="upload-error" role="alert"></div>
+      <button class="btn full" type="submit">Upload material</button>
+    </form>
+  </details>
+
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search by code or title" aria-label="Search courses">
+    <select id="lvl" aria-label="Filter by level"><option value="">All levels</option></select>
+  </div>
+
+  <div class="list" id="list" aria-live="polite"></div>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
